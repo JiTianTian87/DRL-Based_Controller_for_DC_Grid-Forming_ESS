@@ -1,6 +1,6 @@
 %% 1.打开simulink文件,展开成环境
 
-open_system('Env_mode')
+open_system('Env_cpl_buck')
 obsInfo = rlNumericSpec([6 1],...
     'LowerLimit',[-inf -inf  -inf -inf -inf  -inf]',...
     'UpperLimit',[-inf -inf  -inf inf inf inf ]');
@@ -21,7 +21,7 @@ actInfo = rlFiniteSetSpec(actions);
 
 numActions = N;
 
-env = rlSimulinkEnv('Env_mode','Env_mode/RL Agent',...
+env = rlSimulinkEnv('Env_cpl_buck','Env_cpl_buck/RL Agent',...
     obsInfo,actInfo);
 env.ResetFcn = @(in)localResetFcn(in);
 
@@ -94,7 +94,7 @@ experiences = sim(env,agent,rlSimulationOptions);
 
 %% 5.reset部分,重置Vref
 function in = localResetFcn(in)
-blk = sprintf('Env_mode/Desired Current');
+blk = sprintf('Env_cpl_buck/Desired Current');
 Id = 50;
 while Id <= 40 || Id >= 80
    Id =  50;
