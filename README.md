@@ -57,10 +57,25 @@ Simulation figures from the paper:
 - Voltage response under Vref changes
 - Voltage response under parameter uncertainty
 
+
+---
+
+## Citation
+
+If you use this work, please cite:
+@JiTiantian{10721061,
+  author={Ji, Tiantian and Lin, Pengfeng and Zhu, Miao and Meng, Qingzuo and Zhang, Chuanlin and Zhu, Jiebei},
+  booktitle={2024 4th Power System and Green Energy Conference (PSGEC)}, 
+  title={Deep Reinforcement Learning Based Robust Control Strategy for Power Sharing and Voltage Regulation in DC Grid-Forming Energy Storage System}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1327-1331}}
+
 ---
 
 ## Getting Started
 
-1. Clone the repository:
+Clone the repository:
 ```bash
 git clone https://github.com/JiTianTian87/DRL-Based_Controller_for_DC_Grid-Forming_ESS.git
